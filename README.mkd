@@ -54,6 +54,34 @@ rpmbuild -ba tesseract-langpack.spec
 
 Now you have all RPMs in `$HOME/rpmbuild/RPMS/$(uname -m)/`.
 
+## Create repository
+
+If you want to start you own repo with this files, you should create appropriate directory structure,
+generate metadata and serve it using you web (nginx, lighttpd or apache) or ftp server (any of ftpd's).
+
+```bash
+mkdir -p $HOME/repo/centos/6/{i386,x86_64,SRPMS}
+cp $HOME/rpmbuild/SRPMS/* $HOME/repo/centos/6/SRPMS/
+cp $HOME/rpmbuild/RPMS/$(uname -m)/* $HOME/repo/centos/6/$(uname -m)/
+cp $HOME/rpmbuild/RPMS/noarch/* $HOME/repo/centos/6/$(uname -m)/
+
+createrepo $HOME/repo/centos/6/$(uname -m)
+createrepo $HOME/repo/centos/6/SRPMS
+```
+
+After that you can serve files from `repo` directory via web or ftp server and add repo-file to `/etc/yum.repos.d`:
+
+```
+[my-repo-name]
+name = My CentOS $releasever Repository
+baseurl = http://example.org/repo/centos/$releasever/$basearch # if you use http
+#baseurl = ftp://example.org/repo/centos/$releasever/$basearch # if you use ftp
+#baseurl = file:///home/makerpm/repo/centos/$releasever/$basearch # if you use local filesystem/nfs/cifs
+enabled = 1
+protect = 0
+gpgcheck = 0
+```
+
 # Contributors
 
 * Karol Trzcionka (`tesseract` package initial maintainer)
