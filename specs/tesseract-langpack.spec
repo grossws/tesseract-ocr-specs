@@ -7,80 +7,75 @@ Summary:	Langpacks for tesseract
 Group:		Applications/File
 License:	ASL 2.0
 URL:		http://code.google.com/p/tesseract-ocr/
-Source1:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.eng.tar.gz
-Source2:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.rus.tar.gz
-Source3:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.grc.tar.gz
-Source4:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.epo_alt.tar.gz
-Source5:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ukr.tar.gz
-Source6:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tur.tar.gz
-Source7:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tha.tar.gz
-Source8:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tgl.tar.gz
-Source9:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tel.tar.gz
-Source10:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tam.tar.gz
-Source11:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.swe.tar.gz
-Source12:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.swa.tar.gz
-Source13:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.srp.tar.gz
-Source14:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.sqi.tar.gz
-Source15:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.spa_old.tar.gz
-Source16:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.spa.tar.gz
-Source17:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.slv.tar.gz
-Source18:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.slk.tar.gz
-Source19:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ron.tar.gz
-Source20:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.por.tar.gz
-Source21:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.pol.tar.gz
-Source22:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.nor.tar.gz
-Source23:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.nld.tar.gz
-Source24:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.msa.tar.gz
-Source25:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mlt.tar.gz
-Source26:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mkd.tar.gz
-Source27:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mal.tar.gz
-Source28:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.lit.tar.gz
-Source29:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.lav.tar.gz
-Source30:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.kor.tar.gz
-Source31:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.kan.tar.gz
-Source32:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ita_old.tar.gz
-Source33:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ita.tar.gz
-Source34:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.isl.tar.gz
-Source35:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ind.tar.gz
-Source36:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chr.tar.gz
-Source37:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hun.tar.gz
-Source38:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hrv.tar.gz
-Source39:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hin.tar.gz
-Source40:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.heb.tar.gz
-Source41:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.glg.tar.gz
-Source42:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.frm.tar.gz
-Source43:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.frk.tar.gz
-Source44:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.fra.tar.gz
-Source45:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.fin.tar.gz
-Source46:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.eus.tar.gz
-Source47:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.est.tar.gz
-Source48:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.equ.tar.gz
-Source49:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.epo.tar.gz
-Source50:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.enm.tar.gz
-Source51:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ell.tar.gz
-Source52:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.deu.tar.gz
-Source53:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.dan.tar.gz
-Source54:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ces.tar.gz
-Source55:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.cat.tar.gz
-Source56:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.bul.tar.gz
-Source57:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ben.tar.gz
-Source58:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.bel.tar.gz
-Source59:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.aze.tar.gz
-Source60:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ara.tar.gz
-Source61:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.afr.tar.gz
-Source62:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.jpn.tar.gz
-Source63:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_sim.tar.gz
-Source64:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_tra.tar.gz
-Source65:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.vie.tar.gz
+Source1:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.rus.tar.gz
+Source2:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.grc.tar.gz
+Source3:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.epo_alt.tar.gz
+Source4:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ukr.tar.gz
+Source5:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tur.tar.gz
+Source6:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tha.tar.gz
+Source7:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tgl.tar.gz
+Source8:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tel.tar.gz
+Source9:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.tam.tar.gz
+Source10:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.swe.tar.gz
+Source11:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.swa.tar.gz
+Source12:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.srp.tar.gz
+Source13:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.sqi.tar.gz
+Source14:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.spa_old.tar.gz
+Source15:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.spa.tar.gz
+Source16:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.slv.tar.gz
+Source17:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.slk.tar.gz
+Source18:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ron.tar.gz
+Source19:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.por.tar.gz
+Source20:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.pol.tar.gz
+Source21:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.nor.tar.gz
+Source22:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.nld.tar.gz
+Source23:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.msa.tar.gz
+Source24:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mlt.tar.gz
+Source25:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mkd.tar.gz
+Source26:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.mal.tar.gz
+Source27:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.lit.tar.gz
+Source28:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.lav.tar.gz
+Source29:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.kor.tar.gz
+Source30:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.kan.tar.gz
+Source31:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ita_old.tar.gz
+Source32:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ita.tar.gz
+Source33:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.isl.tar.gz
+Source34:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ind.tar.gz
+Source35:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chr.tar.gz
+Source36:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hun.tar.gz
+Source37:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hrv.tar.gz
+Source38:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.hin.tar.gz
+Source39:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.heb.tar.gz
+Source40:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.glg.tar.gz
+Source41:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.frm.tar.gz
+Source42:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.frk.tar.gz
+Source43:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.fra.tar.gz
+Source44:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.fin.tar.gz
+Source45:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.eus.tar.gz
+Source46:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.est.tar.gz
+Source47:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.equ.tar.gz
+Source48:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.epo.tar.gz
+Source49:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.enm.tar.gz
+Source50:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ell.tar.gz
+Source51:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.deu.tar.gz
+Source52:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.dan.tar.gz
+Source53:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ces.tar.gz
+Source54:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.cat.tar.gz
+Source55:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.bul.tar.gz
+Source56:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ben.tar.gz
+Source57:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.bel.tar.gz
+Source58:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.aze.tar.gz
+Source59:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.ara.tar.gz
+Source60:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.afr.tar.gz
+Source61:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.jpn.tar.gz
+Source62:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_sim.tar.gz
+Source63:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_tra.tar.gz
+Source64:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.vie.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:	noarch
 Group:		Applications/File
 Requires:	%{upstreamname} >= 3.02
 
-
-%package eng
-Summary:	English language data for Tesseract
-Requires:	%{upstreamname} >= 3.02
 
 %package rus
 Summary:	Russian language data for Tesseract
@@ -353,9 +348,6 @@ Requires:	%{upstreamname} >= 3.02
 
 %description
 
-%description eng
-English language data for Tesseract 
-
 %description rus
 Russian language data for Tesseract 
 
@@ -573,10 +565,6 @@ rm tessdata/eng.*
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
-%files eng
-%defattr(-,root,root,-)
-%{_datadir}/%{upstreamname}/tessdata/eng.*
 
 %files rus
 %defattr(-,root,root,-)

@@ -82,7 +82,7 @@ File.open(File.expand_path("../../utils/download_sources.sh", __FILE__), "w") do
 end
 File.chmod(0755, File.expand_path("../../utils/download_sources.sh", __FILE__))
 
-@langs.delete :eng # English is included in tesseract package
+@langs.delete 'eng' # English is included in tesseract package
 File.open(File.expand_path("../../specs/tesseract-langpack.spec", __FILE__), "w") do |f|
   f.write ERB.new(File.read(File.expand_path("../tesseract-langpack.spec.erb", __FILE__)), nil, '-').result
 end
