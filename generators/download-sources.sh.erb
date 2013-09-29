@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+SOURCES=$HOME/rpmbuild/SOURCES
+
+download_file() {
+  echo "Downloading file $1"
+  curl $1 -o $SOURCES/${1##*/}
+}
+
+download_file http://www.leptonica.org/source/leptonica-<%= @leptonica_version %>.tar.gz
+
+download_file https://tesseract-ocr.googlecode.com/files/tesseract-ocr-<%= @tesseract_version %>.tar.gz
+
+for l in <%= @langs.keys.delete_if{ |k| k =~ /-frak/ }.join(' ') %> ; do
+  download_file https://tesseract-ocr.googlecode.com/files/tesseract-ocr-<%= @tesseract_langpack_version %>.${l}.tar.gz
+done

@@ -1,0 +1,68 @@
+# Description
+
+This repo contains rpm spec-files to build [Tesseract OCR][tesseract] engine and [Leptonica][leptonica].
+
+Actual versions are: `leptonica 1.69` and `tesseract 3.02`.
+
+# Building
+
+Build process is tested on CentOS 6.4. To study RPM building and specs writting see [Fedora wiki][fedora-build].
+
+## Prepare build environment (for CentOS 6)
+
+Install base and development tools (or only development tools if you have not a miniman CentOS installation):
+
+```bash
+yum groupinstall 'Base' 'Development Tools'
+yum install rpmdevtools rpmlint createrepo
+```
+
+Create non-privileged user to build RPMs and setup build environment:
+
+```bash
+/usr/sbin/useradd --gid users --create-home makerpm
+passwd makerpm
+
+su - makerpm
+rpmdev-setuptree
+```
+
+## Actual build
+
+Log in as `makerpm`, download source files, install build dependencies and build package itself:
+
+```bash
+su - makerpm
+
+curl https://raw.github.com/grossws/tesseract-ocr-specs/master/utils/download-sources.sh | bash
+
+yum-builddep leptonica.spec
+rpmbuild -ba leptonica.spec
+```
+
+Then install built `leptonica-devel` and build `tesseract` with its langpacks:
+
+```bash
+sudo yum install $HOME/rpmbuild/RPMS/$(uname -m)/leptonica{,-devel}-1.69-*.rpm
+
+yum-builddep tesseract.spec
+rpmbuild -ba tesseract.spec
+
+sudo yum install $HOME/rpmbuild/RPMS/$(uname -m)/tesseract{,-devel}-3.02-*.rpm
+rpmbuild -ba tesseract-langpack.spec
+```
+
+Now you have all RPMs in `$HOME/rpmbuild/RPMS/$(uname -m)/`.
+
+# Contributors
+
+* Karol Trzcionka (`tesseract` package initial maintainer)
+* Caolán McNamara
+* Lars Kiesow (@lkiesow). This specs are based on his specs from [lkiesow/matterhorn-rpms repo](https://github.com/lkiesow/matterhorn-rpms).
+* Konstantin Gribov
+
+
+[tesseract]: https://code.google.com/p/tesseract-ocr/
+[leptonica]: http://www.leptonica.org/
+[fedora-build]: http://fedoraproject.org/wiki/How_to_create_an_RPM_package
+

@@ -1,0 +1,77 @@
+%define upstreamname tesseract
+Name:		%{upstreamname}-langpack
+Version:	3.02
+Release:	1%{?dist}
+Summary:	Langpacks for tesseract
+
+Group:		Applications/File
+License:	ASL 2.0
+URL:		http://code.google.com/p/tesseract-ocr/
+<% @langs.keys.each_with_index do |lang, i| -%>
+Source<%= i+1 %>:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.<%= lang %>.tar.gz
+<% end -%>
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildArch:	noarch
+Group:		Applications/File
+Requires:	%{upstreamname} >= 3.02
+
+<% @langs.each do |lang, lang_desc| %>
+%package <%= lang %>
+Summary:	<%= lang_desc %> data for Tesseract
+Requires:	%{upstreamname} >= 3.02
+<% end %>
+
+%description
+<% @langs.each do |lang, lang_desc| %>
+%description <%= lang %>
+<%= lang_desc %> data for Tesseract 
+<% end %>
+
+%prep
+%setup -c -T
+for i in %sources; do 
+  tar xzf $i --strip 1
+done
+
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/%{upstreamname}/tessdata/
+install -p -m 644 -t $RPM_BUILD_ROOT%{_datadir}/%{upstreamname}/tessdata/ tessdata/*
+rm tessdata/eng.*
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+<% @langs.each do |lang, _| %>
+%files <%= lang %>
+%defattr(-,root,root,-)
+%{_datadir}/%{upstreamname}/tessdata/<%= lang %>.*
+<% end %>
+
+%changelog
+* Sun Sep 29 2013 Konstantin Gribov <grossws@gmail.com> - 3.02-1
+- Updated to v3.02
+
+* Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3.00-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
+* Wed Dec 01 2010 Karol Trzcionka <karlikt at gmail.com> - 3.00-1
+- Update to v3.00+
+- Naming based on upstream
+
+* Thu Dec 10 2009 Karol Trzcionka <karlikt at gmail.com> - 2.00-6
+- Delete %%{?dist} macro
+
+* Thu Dec 10 2009 Karol Trzcionka <karlikt at gmail.com> - 2.00-5
+- Fix typo
+
+* Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.00-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
+
+* Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.00-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
+* Fri Aug 24 2007 Karol Trzcionka <karlikt at gmail.com> - 2.00-2
+- Fixed executable file in nl
+* Tue Aug 21 2007 Karol Trzcionka <karlikt at gmail.com> - 2.00-1
+- Initial Release

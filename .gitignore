@@ -1,0 +1,12 @@
+# ignores:
+
+# vagrant files
+/Vagrantfile
+/.vagrant
+
+# package sources
+/sources
+
+# temp files
+*~
+*.swp
