@@ -72,9 +72,6 @@ Source62:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{versi
 Source63:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_sim.tar.gz
 Source64:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.chi_tra.tar.gz
 Source65:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.vie.tar.gz
-Source66:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.dan-frak.tar.gz
-Source67:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.deu-frak.tar.gz
-Source68:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.slk-frak.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:	noarch
 Group:		Applications/File

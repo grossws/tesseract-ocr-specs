@@ -7,7 +7,7 @@ Summary:	Langpacks for tesseract
 Group:		Applications/File
 License:	ASL 2.0
 URL:		http://code.google.com/p/tesseract-ocr/
-<% @langs.keys.each_with_index do |lang, i| -%>
+<% @langs.keys.delete_if{ |l| l =~ /-frak/ }.each_with_index do |lang, i| -%>
 Source<%= i+1 %>:	https://tesseract-ocr.googlecode.com/files/%{upstreamname}-ocr-%{version}.<%= lang %>.tar.gz
 <% end -%>
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
