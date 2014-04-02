@@ -36,7 +36,7 @@ su - makerpm
 
 curl https://raw.githubusercontent.com/grossws/tesseract-ocr-specs/master/utils/download-sources.sh | bash
 
-yum-builddep leptonica.spec
+sudo yum-builddep leptonica.spec
 rpmbuild -ba leptonica.spec
 ```
 
@@ -45,7 +45,7 @@ Then install built `leptonica-devel` and build `tesseract` with its langpacks:
 ```bash
 sudo yum install $HOME/rpmbuild/RPMS/$(uname -m)/leptonica{,-devel}-1.69-*.rpm
 
-yum-builddep tesseract.spec
+sudo yum-builddep tesseract.spec
 rpmbuild -ba tesseract.spec
 
 sudo yum install $HOME/rpmbuild/RPMS/$(uname -m)/tesseract{,-devel}-3.02-*.rpm
