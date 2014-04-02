@@ -34,7 +34,7 @@ Log in as `makerpm`, download source files, install build dependencies and build
 ```bash
 su - makerpm
 
-curl https://raw.github.com/grossws/tesseract-ocr-specs/master/utils/download-sources.sh | bash
+curl https://raw.githubusercontent.com/grossws/tesseract-ocr-specs/master/utils/download-sources.sh | bash
 
 yum-builddep leptonica.spec
 rpmbuild -ba leptonica.spec
